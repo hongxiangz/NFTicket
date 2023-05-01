@@ -2,7 +2,7 @@
 
 ### Overview 
 
-NFTicket is the blockchain-based solution for the booking and selling of online tickets, operating between parties who do not need to trust each other. The specific senario could be the ticket for cinema, theater, and footbal game. As for online ticket broker, what we are trying to improve is to effectively address the persistent problem of fraudulent tickets and unregulated ticket reselling at inflated prices on the black market. The platform is constructed on Ethereum blockchain network, where ERC721 tokens(NFT) are utilized to represent the specific tickets. We also have our own ERC20 token used as our currency to buy the tickets.
+NFTicket is the blockchain-based solution for the booking and selling of online tickets, operating between parties who do not need to trust each other. The specific senario could be the ticket for cinema, theater, and football games. As for online ticket broker, what we are trying to improve is to effectively address the persistent problem of fraudulent tickets and unregulated ticket reselling at inflated prices on the black market. The platform is constructed on Ethereum blockchain network, where ERC721 tokens(NFT) are utilized to represent the specific tickets. We also have our own ERC20 token used as our currency to buy the tickets.
 
 ### Functionality
 1. __Initiator interation__: Any acticity initiator can claim a new token as their ticket with specified ticket price and the total supply of tickets for the sale.
