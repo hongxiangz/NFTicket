@@ -8,7 +8,7 @@ NFTicket is the blockchain-based solution for the booking and selling of online 
 1. __Initiator interation__: Any acticity initiator can claim a new token as their ticket with specified ticket price and the total supply of tickets for the sale.
 2. __Customer interation__: The customer can view the tickets being listed on the market, buy/sell the tickets via the market and view the tickets they own. 
 3. __Restrain speculation__: The price at which customer can sell the ticket can not be more than 120% of the purchase price.
-4. __comnnision return__: Tickets being sold through the secondary market adds a commission of 10% to the organiser which is deducted from the selling price the seller has listed.
+4. __commision return__: Tickets being sold through the secondary market adds a commission of 10% to the organiser which is deducted from the selling price the seller has listed.
 
 #### Smart Contracts
 Mainly 4 contracts listed under `./contracts` directory.
