@@ -13,13 +13,13 @@ NFTicket is the blockchain-based solution for the booking and selling of online 
 #### Smart Contracts
 Mainly 4 contracts listed under `./contracts` directory.
 
-1. __Token_Hong__ - 
+1. __Token_Hong__ 
     1. A contract for ERC20 token called Hong which is used to purchase tickets.
-2. __Ticket_Nft__ - 
+2. __Ticket_Nft__ 
     1. A contract for ERC721 tokens to represent tickets.
     2. The owner of the contract will also have minter role and only the owner can mint new tickets.
-3. __Ticket_Market__ - 
+3. __Ticket_Market__ 
     1. A contract which acts as a marketplace for purchasing tickets from organiser and through market.
     2. This contract will act as a delegate approver for the Hong token as well as NFT token transfers.
-4. __Ticket_Factory__ - 
+4. __Ticket_Factory__ 
     1. A contract which implements a factory pattern with TicketNft contract to create new festivals on the fly.
