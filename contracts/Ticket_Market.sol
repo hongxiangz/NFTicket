@@ -33,7 +33,12 @@ contract FestivalMarketplace {
         uint256 sellingPrice = _NFT.getSellingPrice(ticketId);
         uint256 commision = (sellingPrice * 10) / 100;
 
+        _token.transferFrom(buyer, seller, sellingPrice - commision);
+        _token.transferFrom(buyer, _organiser, commision);
 
+        _NFT.secondaryTransferTicket(buyer, ticketId);
+
+        emit Purchase(buyer, seller, ticketId);
     }
 
 }
