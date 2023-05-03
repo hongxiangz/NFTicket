@@ -25,6 +25,15 @@ contract FestivalMarketplace {
 
         _NFT.transferTicket(buyer);
     }
+    
+    // Purchase ticket from the secondary market hosted by organiser
+    function secondaryPurchase(uint256 ticketId) public {
+        address seller = _NFT.ownerOf(ticketId);
+        address buyer = msg.sender;
+        uint256 sellingPrice = _NFT.getSellingPrice(ticketId);
+        uint256 commision = (sellingPrice * 10) / 100;
 
+
+    }
 
 }
