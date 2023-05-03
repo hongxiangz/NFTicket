@@ -17,5 +17,14 @@ contract FestivalMarketplace {
 
     event Purchase(address indexed buyer, address seller, uint256 ticketId);
 
+    // Purchase tickets from the organiser directly
+    function purchaseTicket() public {
+        address buyer = msg.sender;
+
+        _token.transferFrom(buyer, _organiser, _NFT.getTicketPrice());
+
+        _NFT.transferTicket(buyer);
+    }
+
 
 }
