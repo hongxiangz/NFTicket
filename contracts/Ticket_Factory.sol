@@ -36,23 +36,49 @@ contract Ticket_Factory is Ownable {
                 msg.sender
             );
 
-        FestivalMarketplace newMarketplace =
-            new FestivalMarketplace(token, newFest);
+        Ticket_Market newMarketplace =
+            new Ticket_Market(token, newHong);
 
-        address newFestAddress = address(newFest);
+        address newHongAddress = address(newHong);
 
-        activeFests.push(newFestAddress);
-        activeFestsMapping[newFestAddress] = Festival({
-            festName: TicketName,
-            festSymbol: TicketSymbol,
+        activeHongs.push(newHongAddress);
+        activeHongsMapping[newHongAddress] = Hong({
+            ticketName: TicketName,
+            ticketSymbol: TicketSymbol,
             ticketPrice: ticketPrice,
             totalSupply: totalSupply,
             marketplace: address(newMarketplace)
         });
 
-        emit Created(newFestAddress, address(newMarketplace));
+        emit Created(newHongAddress, address(newMarketplace));
 
-        return newFestAddress;
+        return newHongAddress;
+    }
+
+    // Get all active hongs
+    function getActiveFests() public view returns (address[] memory) {
+        return activeFests;
+    }
+
+    // Get hong's details
+    function getHongDetails(address festAddress)
+        public
+        view
+        returns (
+            string memory,
+            string memory,
+            uint256,
+            uint256,
+            address
+        )
+    {
+        return (
+            activeHongsMapping[hongAddress].ticketName,
+            activeHongsMapping[hongAddress].ticketSymbol,
+            activeHongsMapping[hongAddress].ticketPrice,
+            activeHongsMapping[hongAddress].totalSupply,
+            activeHongsMapping[hongAddress].marketplace
+        );
     }
 
 
