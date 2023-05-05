@@ -19,22 +19,41 @@ contract Ticket_Factory is Ownable {
     event Created(address ntfAddress, address marketplaceAddress);
 
     // Creates new NFT and a marketplace for its purchase
-    function createNewFest(
-        FestToken token,
-        string memory festName,
-        string memory festSymbol,
-        uint256 ticketPrice,
+    function createNewHong(
+        Ticket_Hong token,
+        string memory TicketName,
+        string memory TicketSymbol,
+        uint256 TicketPrice,
         uint256 totalSupply
     ) 
     public onlyOwner returns (address) {
-        FestivalNFT newFest =
-            new FestivalNFT(
-                festName,
-                festSymbol,
-                ticketPrice,
-                totalSupply,
+        Ticket_Nft newTicket =
+            new Ticket_Nft(
+                TicketName,
+                TicketSymbol,
+                TicketPrice,
+                TotalSupply,
                 msg.sender
             );
 
-            
+        FestivalMarketplace newMarketplace =
+            new FestivalMarketplace(token, newFest);
+
+        address newFestAddress = address(newFest);
+
+        activeFests.push(newFestAddress);
+        activeFestsMapping[newFestAddress] = Festival({
+            festName: TicketName,
+            festSymbol: TicketSymbol,
+            ticketPrice: ticketPrice,
+            totalSupply: totalSupply,
+            marketplace: address(newMarketplace)
+        });
+
+        emit Created(newFestAddress, address(newMarketplace));
+
+        return newFestAddress;
+    }
+
+
 }
