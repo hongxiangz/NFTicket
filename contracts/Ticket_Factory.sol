@@ -13,6 +13,10 @@ contract Ticket_Factory is Ownable {
         address marketplace;
     }
 
-    
+    address[] private activeHongs;
+    mapping(address => Ticket) private activeHongsMapping;
+
+    event Created(address ntfAddress, address marketplaceAddress);
+
 
 }
