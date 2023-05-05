@@ -11,7 +11,7 @@ contract Ticket_NFT is Context, AccessControl, ERC721 {
     Counters.Counter private _ticketIds;
     Counters.Counter private _saleTicketId;
 
-    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    bytes32 public constant MINTER_ROLE = hz256("MINTER_ROLE");
 
     struct TicketDetails {
         uint256 purchasePrice;
