@@ -24,7 +24,7 @@ contract Ticket_Factory is Ownable {
         string memory TicketName,
         string memory TicketSymbol,
         uint256 TicketPrice,
-        uint256 totalSupply
+        uint256 TotalSupply
     ) 
     public onlyOwner returns (address) {
         Ticket_Nft newTicket =
