@@ -7,7 +7,7 @@ import "./Ticket_Market.sol";
 contract Ticket_Factory is Ownable {
     struct Ticket {
         string activities_name;
-        string ticketSymbol;
+        string activities_Symbol;
         uint256 ticketPrice;
         uint256 totalSupply;
         address marketplace;
