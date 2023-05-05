@@ -29,12 +29,14 @@ contract Ticket_NFT is Context, AccessControl, ERC721 {
     mapping(address => uint256[]) private purchasedTickets;
 
     constructor(
-        string memory activities_Name,
-        string memory activities_Symbol,
+        string memory TicketName,
+        string memory TicketSymbol,
         uint256 ticketPrice,
         uint256 totalSupply,
         address organiser
-    ) public ERC721(festName, FestSymbol) {
+    ) 
+    
+    public ERC721(TicketName, TicketSymbol) {
         _setupRole(MINTER_ROLE, organiser);
 
         _ticketPrice = ticketPrice;

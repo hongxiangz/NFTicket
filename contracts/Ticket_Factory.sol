@@ -6,11 +6,13 @@ import "./Ticket_Market.sol";
 
 contract Ticket_Factory is Ownable {
     struct Ticket {
-        string activities_name;
-        string activities_Symbol;
-        uint256 ticketPrice;
-        uint256 totalSupply;
+        string TicketName;
+        string TicketSymbol;
+        uint256 TicketPrice;
+        uint256 TotalSupply;
         address marketplace;
     }
+
+    
 
 }
